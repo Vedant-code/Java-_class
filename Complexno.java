@@ -22,6 +22,13 @@ class complex2 {
               
               return t;
           }
+          static complex2 multicomplex(complex2 A, complex2 B){
+             
+              complex2 t=new complex2(A.real*B.real-A.image*B.image, A.real*B.image+A.image*B.real);
+              
+              return t;
+          }
+          
 }
 
 class driver{
@@ -34,6 +41,8 @@ class driver{
         C.printcomplex();
         complex2 D=complex2.subcomplex(A, B);
         D.printcomplex();
+      complex2 E=complex2.multicomplex(A, B);
+      E.printcomplex();
         
     }
 }
